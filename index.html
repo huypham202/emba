@@ -146,6 +146,21 @@
             border-color: #8B0000;
             box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.2);
         }
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.5rem;
+        }
+        .table-custom th, .table-custom td {
+            border: 2px solid #d3c2a9;
+            padding: 1rem;
+            text-align: left;
+        }
+        .table-custom th {
+            background-color: #ede4d1;
+            font-weight: 700;
+            font-size: 1.75rem;
+        }
     </style>
   </head>
   <body class="antialiased">
@@ -654,18 +669,95 @@
         <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
           <div class="text-center md:text-left">
             <h2 class="text-6xl font-bold text-[#8B0000] mb-4">
-              3.1 Ô-GUÝT-XTANH (Augustine)
+              3.1 Ô-GUÝT-XTANH (Augustine) (354-430)
             </h2>
-            <h2 class="text-6xl font-bold text-[#8B0000] mb-4">(354-430)</h2>
-            <p class="text-4xl text-slate-800 mb-6">
-              Nền móng Thần học hóa Triết học
-            </p>
+            <h2 class="text-6xl font-bold text-[#8B0000] mb-4"></h2>
+            <h3 class="text-4xl font-bold text-[#4682B4] mb-6 mt-5">a. Tiểu sử</h3>
+            <ul class="text-3xl text-slate-800 text-left space-y-3">
+              <li>- Aurelius Augustinus Hipponensis (354–430), Giám mục thành Hippo.</li>
+              <li>- Ảnh hưởng triết học Hy Lạp – La Mã (Plato, Tân-Platon, Khắc kỷ).</li>
+              <li>- Cải đạo sang Kitô giáo năm 386.</li>
+              <li>- Tác phẩm: 'Confessiones', 'De Civitate Dei', 'De Trinitate'.</li>
+            </ul>
           </div>
-          <div class="image-container h-[500px]"></div>
+          <div class="image-container h-[500px]">
+            <img src="img/augus.jpg" alt="Augustine" class="w-full h-full object-cover rounded-lg" />
+          </div>
         </div>
       </section>
 
-      <section id="slide-15" class="slide">
+      <section id="slide-augustine-content" class="slide">
+        <div class="w-full max-w-7xl">
+            <h2 class="text-4xl font-bold text-center text-gradient mb-12">b. Augustine: Nội dung Triết học chính</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="image-container h-[600px]">
+                    <img src="img/aug2.jpg" alt="Augustine Content" class="w-full h-full object-cover rounded-lg" />
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                        <div class="interactive-header p-6 flex justify-between items-center">
+                            <h3 class="text-4xl font-bold">1. Đức tin và Lý trí</h3>
+                            <span class="arrow text-4xl font-bold">▶</span>
+                        </div>
+                        <div class="interactive-content">
+                            <p class="p-6 pt-2 text-3xl">"Tin để hiểu" (Credo ut intelligam): Đức tin phải đi trước, mở đường cho lý trí có thể thấu hiểu được chân lý mặc khải của Thiên Chúa.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                        <div class="interactive-header p-6 flex justify-between items-center">
+                            <h3 class="text-4xl font-bold">2. Thượng đế và Cái ác</h3>
+                            <span class="arrow text-4xl font-bold">▶</span>
+                        </div>
+                        <div class="interactive-content">
+                            <p class="p-6 pt-2 text-3xl">Cái ác không phải là một thực thể do Chúa tạo ra, mà chỉ là sự thiếu vắng, sự suy thoái của cái thiện.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                        <div class="interactive-header p-6 flex justify-between items-center">
+                            <h3 class="text-4xl font-bold">3. Ý chí tự do và Ân sủng</h3>
+                            <span class="arrow text-4xl font-bold">▶</span>
+                        </div>
+                        <div class="interactive-content">
+                            <p class="p-6 pt-2 text-3xl">Con người có ý chí tự do nhưng đã bị suy yếu bởi Tội Nguyên Tổ. Do đó, con người yếu đuối và cần đến Ân sủng của Thiên Chúa để hướng thiện.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                        <div class="interactive-header p-6 flex justify-between items-center">
+                            <h3 class="text-4xl font-bold">4. Chính trị – Xã hội: Hai Thành phố</h3>
+                            <span class="arrow text-4xl font-bold">▶</span>
+                        </div>
+                        <div class="interactive-content">
+                            <p class="p-6 pt-2 text-3xl">Lịch sử nhân loại là cuộc đấu tranh giữa "Thành phố của Thiên Chúa" (Civitas Dei) và "Thành phố của Trần thế" (Civitas Terrena).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Giá trị và ảnh hưởng -->
+    <section id="slide-augustine-influence" class="slide">
+         <div class="w-full max-w-7xl">
+            <h2 class="text-4xl font-bold text-center text-gradient mb-12">c. Augustine: Giá trị và Ảnh hưởng</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg p-8 space-y-6 text-3xl">
+                    <p class="border-b-2 pb-4 border-[#d3c2a9]"><span class="font-bold text-[#8B0000]">Cầu nối:</span> Giữa triết học Hy Lạp (đặc biệt là Plato) và thần học Kitô giáo.</p>
+                    <p class="border-b-2 pb-4 border-[#d3c2a9]"><span class="font-bold text-[#4682B4]">Nền móng:</span> Đặt cơ sở cho triết học Trung cổ về mối quan hệ giữa đức tin và lý trí.</p>
+                    <p class="border-b-2 pb-4 border-[#d3c2a9]"><span class="font-bold text-[#DAA520]">Mở đường:</span> Triết học hướng nội, tập trung vào thế giới tinh thần, mở đường cho chủ nghĩa hiện sinh sau này.</p>
+                    <p class="border-b-2 pb-4 border-[#d3c2a9]"><span class="font-bold">Ảnh hưởng lâu dài:</span> Học thuyết về cái ác, ý chí tự do và ân sủng tiếp tục định hình thần học phương Tây.</p>
+                    <p><span class="font-bold">Chính trị:</span> Tư tưởng về "Hai Thành phố" đặt nền móng cho sự phân biệt giữa giáo quyền và thế quyền.</p>
+                </div>
+                <div class="image-container h-[600px]">
+                     <img src="img/aug3.webp" alt="Augustine Influence" class="w-full h-full object-cover rounded-lg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- <section id="slide-15" class="slide">
         <div class="w-full max-w-4xl text-center">
           <h3 class="text-5xl font-bold text-[#4682B4] mb-8">
             a. Bản thể luận
@@ -717,7 +809,109 @@
           </p>
           <div class="image-container max-w-lg h-80"></div>
         </div>
-      </section>
+      </section> -->
+
+<!-- Slide 3: Ảnh hưởng tới các thời kỳ sau -->
+        <section id="slide-influence-after" class="slide">
+            <div class="w-full max-w-7xl">
+                <h2 class="text-4xl font-bold text-center text-gradient mb-12">d. Ảnh hưởng tới các thời kỳ sau</h2>
+                <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg p-8">
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Thời kỳ</th>
+                                <th>Nội dung kế thừa từ Augustine</th>
+                                <th>Đại diện tiêu biểu</th>
+                                <th>Ví dụ cụ thể</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Trung cổ (Công giáo)</td>
+                                <td>Ân sủng, tội lỗi nguyên thủy</td>
+                                <td>Thomas Aquinas</td>
+                                <td>Aquinas: con người cần ân sủng, nhưng lý trí vẫn có vai trò.</td>
+                            </tr>
+                            <tr>
+                                <td>Cải cách Tin Lành</td>
+                                <td>Ân sủng, tiền định</td>
+                                <td>Martin Luther, John Calvin</td>
+                                <td>Luther: chỉ được cứu nhờ ân sủng; Calvin: học thuyết tiền định kép.</td>
+                            </tr>
+                            <tr>
+                                <td>Cận đại</td>
+                                <td>Si fallor, sum → Cogito; cái ác = thiếu thiện</td>
+                                <td>Descartes, Leibniz</td>
+                                <td>Descartes: 'Cogito, ergo sum'; Leibniz: thế giới tốt nhất có thể.</td>
+                            </tr>
+                            <tr>
+                                <td>Hiện sinh & hiện đại</td>
+                                <td>Đức tin vượt lý trí; ý chí, nội tâm, hữu hạn</td>
+                                <td>Kierkegaard, Heidegger, Arendt</td>
+                                <td>Kierkegaard: bước nhảy đức tin; Heidegger: thời gian hữu hạn; Arendt: tự do & trách nhiệm.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Kế thừa từ triết học Hy Lạp -->
+        <section id="slide-inheritance-greek" class="slide">
+            <div class="w-full max-w-7xl">
+                <h2 class="text-4xl font-bold text-center text-gradient mb-12">e. Kế thừa từ triết học Hy Lạp</h2>
+                <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg p-8">
+                    <table class="table-custom">
+                        <thead>
+                            <tr>
+                                <th>Triết gia/Trường phái</th>
+                                <th>Nội dung gốc</th>
+                                <th>Augustine kế thừa</th>
+                                <th>Biến đổi (Kitô hóa)</th>
+                                <th>Ví dụ cụ thể</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Plato</td>
+                                <td>Ý niệm tối cao = Cái Thiện</td>
+                                <td>Thừa nhận Thực tại tối cao</td>
+                                <td>Đồng nhất Cái Thiện = Thiên Chúa</td>
+                                <td>'Confessiones': Chúa là Ánh sáng tối cao.</td>
+                            </tr>
+                            <tr>
+                                <td>Plotinus (Tân-Platon)</td>
+                                <td>Vạn vật phát xuất từ 'Một'</td>
+                                <td>Giữ cấu trúc phân tầng</td>
+                                <td>Thay 'Một' bằng Chúa sáng tạo từ hư vô</td>
+                                <td>'De Civitate Dei': Thế giới do Chúa tạo.</td>
+                            </tr>
+                            <tr>
+                                <td>Socrates</td>
+                                <td>Tri thức gắn liền đức hạnh</td>
+                                <td>Đạo đức dựa vào tri thức</td>
+                                <td>Cần ân sủng Chúa vì ý chí yếu</td>
+                                <td>'Confessiones': Augustine biết xấu vẫn làm.</td>
+                            </tr>
+                            <tr>
+                                <td>Aristotle</td>
+                                <td>Logic, mục đích luận, hạnh phúc trần thế</td>
+                                <td>Sử dụng logic, thừa nhận cứu cánh</td>
+                                <td>Cứu cánh tối hậu là hạnh phúc nơi Chúa</td>
+                                <td>'De Trinitate': luận chứng logic về Ba Ngôi.</td>
+                            </tr>
+                            <tr>
+                                <td>Khắc kỷ</td>
+                                <td>Đạo đức nội tâm, sống theo lý trí</td>
+                                <td>Nhấn mạnh sự nội tâm, tự kiểm điểm</td>
+                                <td>Thay số phận bằng ý chí tự do + ân sủng Chúa</td>
+                                <td>'Confessiones': hành trình nội tâm tới Chúa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
       <!-- Phần của Người 4 -->
       <section id="slide-18" class="slide">
@@ -1333,7 +1527,9 @@
             thiết cho sự chuyển mình lớn lao của triết học phương Tây.
           </p>
         </div>
-        <div class="image-container mt-8 max-w-lg h-64"></div>
+        <div class="image-container mt-8 max-w-lg h-199">
+          <img src="img/kl.png" alt="Kết luận" class="w-full h-full object-cover rounded-lg" />
+        </div>
         
       </section>
 

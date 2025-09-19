@@ -121,6 +121,31 @@
         font-size: 2rem;
         color: #8b0000;
       }
+      .expanded .content {
+        display: block;
+      }
+      .qa-input {
+            background-color: #faf3e0;
+            border: 2px solid #d3c2a9;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            font-size: 1.75rem; /* Larger font size for input */
+            width: 100%;
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+            color: #4a2c2a;
+            font-family: 'Texturina', serif;
+            resize: none; /* Prevent resizing */
+            line-height: 1.4; /* Adjust line height for multiline */
+        }
+        .qa-input::placeholder {
+            color: #a8957d;
+            font-style: italic;
+        }
+        .qa-input:focus {
+            outline: none;
+            border-color: #8B0000;
+            box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.2);
+        }
     </style>
   </head>
   <body class="antialiased">
@@ -395,7 +420,7 @@
               <div
                 class="interactive-header p-4 border-b-2 border-[#d3c2a9] font-bold"
               >
-                2.1 ▶ Xu hướng "hướng ngoại" và nhiệm vụ "đẩy tớ cho thần học"
+                2.1 ▶ Xu hướng "hướng ngoại" và nhiệm vụ "đầy tớ cho thần học"
               </div>
               <div class="interactive-content px-4">
                 <p>
@@ -762,14 +787,19 @@
       </section>
 
       <!-- Phần của Người 5 -->
-      <section id="slide-21" class="slide">
+      <!-- <section id="slide-21" class="slide">
         <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
           <div class="text-center md:text-left">
             <h2 class="text-6xl font-bold text-[#8B0000] mb-4">
-              3.3. THÔ-MÁT ĐA-CANH (Thomas Aquinas) (1225-1274)
+              3.3. THÔ-MÁT ĐA-CANH (Thomas Aquinas - Thomas d'Aquin) (1225-1274)
             </h2>
             <p class="text-4xl text-slate-800 mb-6">
-              Đỉnh cao Chủ nghĩa Kinh viện
+              Triết gia lỗi lạc nhất Chủ nghĩa Kinh viện trong giai đoạn Cực thịnh
+              (thế kỷ XIII)
+            </p>
+            <p class="text-4xl text-slate-800 mb-6">
+              - Tu viện Monte Cassino <br/>
+              - Đại học Naples, Paris
             </p>
           </div>
           <div
@@ -782,74 +812,360 @@
             />
           </div>
         </div>
-      </section>
+      </section> -->
+
+      <section class="slide">
+        <div class="w-full max-w-7xl">
+            <h2 class="text-6xl font-bold text-center text-gradient mb-12">3.3. TÔMÁT ĐA-CANH<br/> (Thomas Aquinas - Thomas d'Aquin) (1225-1274)</h2>
+
+            <!-- Phần Tiểu sử -->
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                <div class="image-container h-[450px]">
+                    <img src="img/21.jpg" alt="Thomas Aquinas" class="h-full mx-auto rounded-xl shadow-lg border-2 border-[#d3c2a9] object-cover" />
+                </div>
+                <div>
+                    <h3 class="text-4xl font-bold text-[#8B0000] mb-6">Tóm tắt Tiểu sử</h3>
+                    <p class="text-3xl leading-relaxed text-slate-800">
+                        Thánh Tômat Đacanh (1225-1274) là một linh mục, nhà thần học người Ý và là triết gia lỗi lạc nhất của trường phái Kinh viện thời Trung cổ. <br/> Tổng hợp xuất sắc: Triết học Aristotle & các nguyên lý của thần học Kitô giáo, tạo ra một hệ thống triết học toàn diện.
+                    </p>
+                    <p class="text-2xl">
+                    - Tu viện Monte Cassino <br/>
+                    - Đại học Naples, Paris
+                  </p>
+                  </p>
+                </div>
+            </div>
+
+            <!-- Phần Phân tích -->
+            <div>
+                <h3 class="text-4xl font-bold text-center text-[#4682B4] mb-8">Phân tích Nguyên nhân dẫn tới Tư tưởng Triết học</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Cột 1: Bối cảnh -->
+                    <div class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]">
+                        <h4 class="font-bold text-3xl mb-4">1. Bối cảnh Lịch sử: Làn sóng Aristotle</h4>
+                        <div class="image-container h-48 mb-4">
+                            <img src="img/aristotle.webp" alt="Aristotle" class="w-full h-full object-cover rounded-lg" />
+                        </div>
+                        <ul class="list-disc list-inside space-y-3 text-xl">
+                            <li>Các tác phẩm của 
+                                <span class="relative cursor-help underline decoration-dashed" 
+                                      onmouseover="this.nextElementSibling.style.display='block'" 
+                                      onmouseout="this.nextElementSibling.style.display='none'">
+                                    Aristotle
+                                </span>
+                                <div class="absolute bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm max-w-md z-10 hidden">
+                                    <strong>1. Lập trường Duy thực dựa trên Kinh nghiệm:</strong> Arix-tốt đứng trên lập trường duy thực (Realism) khi giải quyết vấn đề về tri thức. Ông cho rằng nhận thức là một quá trình từ kinh nghiệm đến tri thức lý tính.<br><br>
+                                    <strong>2. Đối tượng của Tri thức:</strong> Đối tượng của tri thức khoa học là cái chung tất yếu, và tri thức khoa học có đặc điểm là luôn luôn là chân lý.
+                                </div>
+                                được dịch và du nhập mạnh mẽ vào châu Âu.
+                            </li>
+                            <li>Phương pháp logic và chủ nghĩa duy lý của ông thách thức hệ tư tưởng cũ.</li>
+                            <li>Môi trường đại học sôi động ở Paris và Naples tạo điều kiện cho các cuộc tranh luận lớn.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cột 2: Khủng hoảng -->
+                    <div class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]">
+                        <h4 class="font-bold text-3xl mb-4">2. Khủng hoảng: Đức tin & Lý trí</h4>
+                         <div class="image-container h-48 mb-4">
+                             <img src="img/tin.jpg" alt="Đức tin và Lý trí" class="w-full h-full object-cover rounded-lg" />
+                         </div>
+                        <ul class="list-disc list-inside space-y-3 text-xl">
+                            <li>Phe bảo thủ lo sợ lý trí sẽ phá hủy đức tin.</li>
+                            <li>Phe cấp tiến lại đề xuất 
+                                <span class="relative cursor-help underline decoration-dashed" 
+                                      onmouseover="this.nextElementSibling.style.display='block'" 
+                                      onmouseout="this.nextElementSibling.style.display='none'">
+                                      "thuyết chân lý kép", 
+                                </span>
+                                tách rời đức tin và lý trí
+                                <div class="absolute bg-gray-800 text-white p-3 rounded-lg shadow-lg text-sm max-w-sm z-10 hidden">
+                                    A-bơ-la (Abela) cho rằng lý trí cao hơn lòng tin. Ngược lại, một số triết gia khác lại tuyên bố rằng lòng tin không thể vượt ra khỏi giới hạn của lý trí
+                                </div>
+                            .</li>
+                            <li>Tômat Đacanh chọn con đường trung dung: chứng minh đức tin và lý trí bổ sung cho nhau, cùng bắt nguồn từ Thiên Chúa.</li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
 
       <section id="slide-22" class="slide">
-        <div class="w-full max-w-5xl text-center">
+        <div class="w-full max-w-10xl text-center">
           <h3 class="text-5xl font-bold text-[#4682B4] mb-8">
             a. Bản thể luận (Duy thực ôn hòa)
           </h3>
-          <p class="text-3xl mb-6">"Cái chung" tồn tại trên ba mặt:</p>
-          <div class="grid md:grid-cols-3 gap-6 text-2xl">
-            <div
-              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
-            >
-              <b>1. Trong trí tuệ Thượng đế</b><br />(trước sự vật)
-            </div>
-            <div
-              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
-            >
-              <b>2. Trong sự vật</b><br />(là quy luật, tri thức)
-            </div>
-            <div
-              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
-            >
-              <b>3. Trong trí tuệ con người</b><br />(sau sự vật)
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="slide-23" class="slide">
-        <div class="w-full max-w-4xl text-center">
-          <h3 class="text-5xl font-bold text-[#8B0000] mb-8">
-            b. Nhận thức luận
-          </h3>
           <p class="text-3xl mb-6">
-            Triết học và Thần học không đối lập, vì Thượng đế là nguồn gốc của
-            mọi chân lý. Tuy nhiên, triết học ở vị trí thấp hơn và phải phục
-            tùng thần học.
+            1. Giải quyết vấn đề <strong>"cái chung"</strong> và <strong>"cái riêng"</strong>: duy thực ôn hòa (thực
+            tại luận ôn hòa). <br /> <br />
+            2. Tin vào sự hài hòa giữa lòng tin tôn giáo và lý trí
           </p>
-        </div>
-      </section>
-
-      <section id="slide-24" class="slide">
-        <div class="w-full max-w-5xl">
-          <h3 class="text-5xl font-bold text-center text-[#DAA520] mb-8">
-            c. Nhân sinh quan & Quan niệm về xã hội
-          </h3>
-          <div class="grid md:grid-cols-2 gap-8">
+          <p class="text-3xl mb-6">➡️ "Cái chung" tồn tại trên ba mặt:</p>
+          <div class="grid md:grid-cols-3 gap-1 text-2xl">
             <div
-              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9] cursor-pointer w-full md:w-[100%]"
+              onclick="this.classList.toggle('expanded')"
             >
-              <h4 class="font-bold text-3xl mb-3">Nhân sinh quan</h4>
-              <p class="text-2xl">
-                Đạo đức là sản phẩm của Thượng đế. Hạnh phúc đến từ hy vọng,
-                tình yêu và niềm tin dẫn đến thiên đàng.
-              </p>
+              <b>1. Trước sự vật</b><br />Trong trí tuệ Thượng đế, như những ý
+              tưởng ban đầu (blueprints)
+              <div
+                class="content hidden transition-all duration-300 ease-in-out"
+              >
+                <hr class="my-4" />
+                <p class="text-xl">
+                  Ví dụ: Trong trí tuệ của Thượng đế, tồn tại một Khuôn mẫu Cây Hoàn hảo. Đây là ý tưởng nguyên thủy, phi vật chất, vĩnh cửu về những gì tạo nên một cái cây (có thân, có rễ, có khả năng quang hợp). Khuôn mẫu này là lý tưởng mà mọi cái cây trên thế gian đều cố gắng mô phỏng.
+                </p>
+                <img src="img/cay.jpg" alt="Cây mô tả" class="w-full max-w-md mx-auto h-85 object-cover rounded-lg mb-4" />
+
+              </div>
             </div>
             <div
-              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9] cursor-pointer w-full md:w-[100%]"
+              onclick="this.classList.toggle('expanded')"
             >
-              <h4 class="font-bold text-3xl mb-3">Quan niệm xã hội</h4>
+              <b>2. Trong sự vật</b><br />(dưới dạng các quy luật, tri thức)
+              <div
+                class="content hidden transition-all duration-300 ease-in-out"
+              >
+                <hr class="my-4" />
+                <p class="text-xl">
+                  Ví dụ: Khi bạn nhìn vào một cây dừa, một cây đa, hay một cây phượng. Khái niệm "Cây" tồn tại trong bản thân những vật thể này. Mặc dù hình dạng, kích thước, và loại lá khác nhau, nhưng chúng đều chứa đựng những thuộc tính bản chất khiến chúng ta phải gọi chúng là cây (có cấu trúc gỗ, có rễ bám đất, có sự sống thực vật).
+                </p>
+                <img src="img/cay2.png" alt="Cây 2" class="w-full max-w-md mx-auto h-90 object-cover rounded-lg mb-4" />
+
+              </div>
+            </div>
+            <div
+              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9] cursor-pointer w-full md:w-[100%]"
+              onclick="this.classList.toggle('expanded')"
+            >
+              <b>3. Trong trí tuệ con người</b><br />(Trừu tượng hóa từ các sự
+              vật riêng lẻ)
+              <div
+                class="content hidden transition-all duration-300 ease-in-out"
+              >
+                <hr class="my-4" />
+                <p class="text-xl">
+                  • Ví dụ: Một đứa trẻ lần đầu tiên thấy cây dừa, sau đó là cây đa, rồi cây phượng. Sau khi quan sát nhiều cá thể riêng lẻ này, trí tuệ của đứa trẻ thực hiện thao tác trừu tượng hóa. Nó loại bỏ các đặc điểm riêng biệt (màu sắc cụ thể của lá, độ cong của thân) và giữ lại các yếu tố chung nhất (sinh vật có thân và lá). • Kết quả là, đứa trẻ hình thành nên khái niệm "Cây" trong tâm trí mình. Khái niệm "Cây" này, tồn tại trong đầu óc con người, là cái chung được tạo ra sau khi đã kinh nghiệm các sự vật riêng lẻ.
+                </p>
+                <img src="img/cay3.png" alt="Cây 3" class="w-full max-w-md mx-auto h-90 object-cover rounded-lg mb-4" />
+
+              </div>
+            </div>
+          </div>
+          <div class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9] cursor-pointer mt-6 max-w-6xl mx-auto"
+            onclick="this.classList.toggle('expanded')"
+          >
+            <div class="text-center">
+              <b class="text-3xl">Tóm tắt cốt lõi</b>
+            </div>
+            <div class="content hidden transition-all duration-300 ease-in-out">
+              <hr class="my-4" />
               <p class="text-2xl">
-                Chống bất bình đẳng xã hội. Quyền của vua là do Thượng đế ban,
-                nhưng vua phải phục tùng Giáo hoàng La Mã.
+                Không phủ nhận bất kỳ mặt tồn tại nào của "cái chung":
+                <ul class="list-disc pl-6 text-left text-2xl mt-4">
+                  <li>Tôn trọng <strong>Thần học</strong> bằng cách khẳng định cái chung có nguồn gốc siêu việt trong trí tuệ Thượng đế (trước sự vật).</li>
+                  <li>Tôn trọng <strong>Khoa học</strong> và <strong>Lý trí</strong> bằng cách khẳng định cái chung tồn tại khách quan trong thế giới vật chất (trong sự vật) và có thể được nhận thức thông qua kinh nghiệm và trừu tượng hóa (sau sự vật).</li>
+                </ul>
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="slide">
+        <div class="w-full max-w-7xl">
+            <h2 class="text-4xl font-bold text-center text-gradient mb-12">b. Nhận thức luận của Thô-mát Đa-canh</h2>
+
+            <div class="space-y-6">
+                <!-- Mục 1: Mối quan hệ -->
+                <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                    <div class="interactive-header p-6 flex justify-between items-center">
+                        <h3 class="text-4xl font-bold text-[#4682B4]">1. Mối quan hệ: Triết học và Thần học</h3>
+                        <span class="arrow text-4xl font-bold text-[#4682B4]">▶</span>
+                    </div>
+                    <div class="interactive-content">
+                        <div class="p-6 pt-0 grid md:grid-cols-2 gap-8 items-center">
+                            <div class="space-y-4 text-2xl">
+                                <p><span class="font-bold">Triết học (Lý trí):</span> Sử dụng logic để tìm kiếm chân lý có thể chứng minh được bằng trí tuệ con người.</p>
+                                <p><span class="font-bold">Thần học (Lòng tin):</span> Dựa trên lòng tin và sự mặc khải trong Kinh thánh để tiếp cận chân lý tôn giáo.</p>
+                                <p class="italic mt-4">→ Ông không coi chúng đối lập, mà là hai con đường khác nhau.</p>
+                            </div>
+                            <div class="image-container h-80">
+                                 <img src="img/nhan_thuc.png" alt="Nhận thức luận" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mục 2: Vị trí & Vai trò -->
+                <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                    <div class="interactive-header p-6 flex justify-between items-center">
+                        <h3 class="text-4xl font-bold text-[#8B0000]">2. Vị trí & Vai trò: "Đầy tớ cho Thần học"</h3>
+                        <span class="arrow text-4xl font-bold text-[#8B0000]">▶</span>
+                    </div>
+                    <div class="interactive-content">
+                         <div class="p-6 pt-0 grid md:grid-cols-2 gap-8 items-center">
+                            <div class="text-center">
+                                <div class="p-4 bg-[#8B0000] text-white rounded-t-lg font-bold text-3xl">THẦN HỌC (Tối cao)</div>
+                                <div class="border-l-4 border-r-4 border-b-4 border-[#d3c2a9] p-4 bg-white">
+                                    <p class="font-bold text-3xl">TRIẾT HỌC (Phục tùng)</p>
+                                </div>
+                                 <p class="text-2xl mt-6">Thượng đế là nguồn gốc của mọi chân lý, do đó triết học phải phục tùng và phục vụ thần học.</p>
+                            </div>
+                             <div class="image-container h-90">
+                                 <img src="img/thu_tu.png" alt="Quá trình nhận thức" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mục 3: Quá trình Nhận thức -->
+                <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                    <div class="interactive-header p-6 flex justify-between items-center">
+                        <h3 class="text-4xl font-bold text-[#DAA520]">3. Quá trình Nhận thức & "Cái chung"</h3>
+                         <span class="arrow text-4xl font-bold text-[#DAA520]">▶</span>
+                    </div>
+                    <div class="interactive-content">
+                        <div class="p-6 pt-0 grid md:grid-cols-2 gap-8 items-center">
+                            <div class="space-y-4 text-2xl text-center">
+                                <p class="font-bold">Sự vật riêng lẻ</p>
+                                <p class="text-4xl">↓</p>
+                                <p class="italic">Trừu tượng hóa của trí tuệ</p>
+                                <p class="text-4xl">↓</p>
+                                <p class="font-bold">"Cái chung" trong trí tuệ</p>
+                                <p class="mt-6">Con người nhận thức được "cái chung" sau khi đã tiếp xúc và trừu tượng hóa từ thế giới vật chất.</p>
+                            </div>
+                            <div class="image-container h-72">
+                              <img src="img/qua_trinh.png" alt="Quá trình nhận thức" class="w-full h-full object-cover rounded-lg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tóm tắt -->
+            <div class="mt-12 bg-blue-100 border-l-8 border-[#4682B4] text-[#4a2c2a] p-8 rounded-r-lg shadow-lg">
+                <h3 class="text-4xl font-bold mb-4">Tóm lại</h3>
+                <p class="text-3xl">Hệ thống của Aquinas được xây dựng để bảo vệ giáo lý tôn giáo (đặt Thần học là tối cao) nhưng đồng thời vẫn sử dụng lý trí và logic của triết học để củng cố và giải thích đức tin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide">
+      <div class="w-full max-w-7xl">
+          <h2 class="text-4xl font-bold text-center text-gradient mb-12">d.Nhân sinh quan & Quan điểm Xã hội của Tômat Đacanh</h2>
+
+          <div class="grid md:grid-cols-2 gap-12">
+              
+              <!-- Cột 1: Nhân sinh quan và Đạo đức học -->
+              <div class="space-y-6">
+                  <h3 class="text-4xl font-bold text-[#8B0000] text-center">I. Nhân sinh quan và Đạo đức học</h3>
+                  
+                  <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                      <div class="interactive-header p-6 flex justify-between items-center">
+                          <h4 class="text-3xl font-bold">1. Nguồn gốc Đạo đức</h4>
+                          <span class="arrow text-4xl font-bold">▶</span>
+                      </div>
+                      <div class="interactive-content">
+                          <div class="p-6 pt-0 space-y-4">
+                              <div class="image-container h-0">
+                                  
+                              </div>
+                              <ul class="list-disc list-inside text-2xl space-y-2">
+                                  <li>Đạo đức là sản phẩm cao cả của Thượng đế.</li>
+                                  <li>Con người là phương tiện thực hiện mệnh lệnh tôn giáo.</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                      <div class="interactive-header p-6 flex justify-between items-center">
+                          <h4 class="text-3xl font-bold">2. Điều chỉnh lý luận Aristotle</h4>
+                          <span class="arrow text-4xl font-bold">▶</span>
+                      </div>
+                      <div class="interactive-content">
+                          <div class="p-6 pt-0 space-y-4">
+                              <div class="image-container h-0">
+                                  
+                              </div>
+                              <p class="text-2xl">Đa-canh đã điều chỉnh lý luận của Aristotle, hướng mục tiêu hạnh phúc (Eudaimonia) trần thế phục vụ cho mục đích tôn giáo tối cao.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                      <div class="interactive-header p-6 flex justify-between items-center">
+                          <h4 class="text-3xl font-bold">3. Hạnh phúc và Linh hồn</h4>
+                          <span class="arrow text-4xl font-bold">▶</span>
+                      </div>
+                      <div class="interactive-content">
+                          <div class="p-6 pt-0 space-y-4">
+                              <div class="image-container h-0">
+                                  
+                              </div>
+                               <ul class="list-disc list-inside text-2xl space-y-2">
+                                  <li>Hạnh phúc đạt được qua sự tác động của linh hồn.</li>
+                                  <li>Rèn luyện các phẩm chất cao cả như hy vọng, tình yêu, niềm tin sẽ được sống ở thiên đàng.</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Cột 2: Quan điểm về Xã hội -->
+              <div class="space-y-6">
+                  <h3 class="text-4xl font-bold text-[#4682B4] text-center">II. Quan điểm về Xã hội</h3>
+
+                   <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                      <div class="interactive-header p-6 flex justify-between items-center">
+                          <h4 class="text-3xl font-bold">1. Đẳng cấp và Bất bình đẳng</h4>
+                          <span class="arrow text-4xl font-bold">▶</span>
+                      </div>
+                      <div class="interactive-content">
+                          <div class="p-6 pt-0 space-y-4">
+                               <div class="image-container h-0">
+                                  
+                              </div>
+                              <p class="text-2xl">Thô-mát Đa-canh có lập trường chống lại sự bất bình đẳng và trật tự đẳng cấp khắc nghiệt trong xã hội.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-lg">
+                      <div class="interactive-header p-6 flex justify-between items-center">
+                          <h4 class="text-3xl font-bold">2. Nguồn gốc và Giới hạn Quyền lực</h4>
+                          <span class="arrow text-4xl font-bold">▶</span>
+                      </div>
+                      <div class="interactive-content">
+                          <div class="p-6 pt-0 space-y-4">
+                              <div class="image-container h-0">
+                                  
+                              </div>
+                              <ul class="list-disc list-inside text-2xl space-y-2">
+                                  <li>Quyền lực của vua là do Thượng đế tạo ra.</li>
+                                  <li>Tuy nhiên, vua phải phục tùng Thượng đế và Giáo hoàng La Mã.</li>
+                                  <p class="italic">→ Củng cố vị trí thống trị tuyệt đối của hệ tư tưởng Thiên Chúa giáo.</p>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+             
+          </div>
+           <!-- Phần Kết luận -->
+           <div class="mt-12 bg-blue-100 border-l-8 border-[#4682B4] text-[#4a2c2a] p-8 rounded-r-lg shadow-lg">
+            <h3 class="text-4xl font-bold mb-4">Kết luận</h3>
+            <p class="text-3xl">Bắc cầu từ Triết học cổ đại, với lập trường duy thực ôn hòa và kế thừa, điều chỉnh lý luận của Aristotle để phù hợp với yêu cầu tôn giáo. <br/> <br/> Tư tưởng 3 mặt tồn tại của "cái chung" là cốt lõi của học thuyết => tạo nền tảng vững chắc cho Chủ nghĩa Tômát mới và trở thành triết học chính thức của Vatican sau này.</p>
+          </div>
+      </div>
+  </section>
 
       <!-- Phần của Người 6 -->
       <section id="slide-25" class="slide">
@@ -925,7 +1241,7 @@
             Hạn chế và tính chất đặc thù
           </h3>
           <ul class="space-y-4 text-3xl">
-            <li>Mang nặng tính thần học, là "đẩy tớ cho thần học".</li>
+            <li>Mang nặng tính thần học, là "đầy tớ cho thần học".</li>
             <li>
               Cản trở khoa học và phát triển chậm chạp do thần quyền kìm hãm.
             </li>
@@ -1018,10 +1334,45 @@
           </p>
         </div>
         <div class="image-container mt-8 max-w-lg h-64"></div>
-        <p class="mt-12 text-4xl font-bold text-[#8B0000]">
-          Xin cảm ơn đã lắng nghe!
-        </p>
+        
       </section>
+
+      <section class="slide">
+        <div class="w-full max-w-5xl text-center">
+            <h2 class="text-7xl font-bold text-gradient mb-8">Hỏi & Đáp</h2>
+            <p class="text-3xl text-slate-700 mb-12">Xin mời đặt câu hỏi cho nhóm chúng tôi</p>
+
+            <div class="space-y-6">
+                <div class="flex items-start gap-4" id="question-1">
+                    <span class="text-4xl font-bold text-[#8B0000] pt-4">1.</span>
+                    <textarea rows="2" class="qa-input" placeholder="Gõ câu hỏi thứ nhất tại đây..."></textarea>
+                    <button class="text-4xl font-bold text-red-600 hover:text-red-800 pt-4" onclick="document.getElementById('question-1').style.display='none'">−</button>
+                </div>
+                <div class="flex items-start gap-4" id="question-2">
+                    <span class="text-4xl font-bold text-[#8B0000] pt-4">2.</span>
+                    <textarea rows="2" class="qa-input" placeholder="Gõ câu hỏi thứ hai tại đây..."></textarea>
+                    <button class="text-4xl font-bold text-red-600 hover:text-red-800 pt-4" onclick="document.getElementById('question-2').style.display='none'">−</button>
+                </div>
+                <div class="flex items-start gap-4" id="question-3">
+                    <span class="text-4xl font-bold text-[#8B0000] pt-4">3.</span>
+                    <textarea rows="2" class="qa-input" placeholder="Gõ câu hỏi thứ ba tại đây..."></textarea>
+                    <button class="text-4xl font-bold text-red-600 hover:text-red-800 pt-4" onclick="document.getElementById('question-3').style.display='none'">−</button>
+                </div>
+                <div class="flex items-start gap-4" id="question-4">
+                    <span class="text-4xl font-bold text-[#8B0000] pt-4">4.</span>
+                    <textarea rows="2" class="qa-input" placeholder="Gõ câu hỏi thứ tư tại đây..."></textarea>
+                    <button class="text-4xl font-bold text-red-600 hover:text-red-800 pt-4" onclick="document.getElementById('question-4').style.display='none'">−</button>
+                </div>
+                <div class="flex items-start gap-4" id="question-5">
+                    <span class="text-4xl font-bold text-[#8B0000] pt-4">5.</span>
+                    <textarea rows="2" class="qa-input" placeholder="Gõ câu hỏi thứ năm tại đây..."></textarea>
+                    <button class="text-4xl font-bold text-red-600 hover:text-red-800 pt-4" onclick="document.getElementById('question-5').style.display='none'">−</button>
+                </div>
+            </div>
+
+            <p class="mt-16 text-4xl font-bold text-[#8B0000]">Xin chân thành cảm ơn!</p>
+        </div>
+    </section>  
     </main>
 
     <div class="slide-counter" id="slide-counter">1 / 34</div>

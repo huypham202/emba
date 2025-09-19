@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài trình bày: Triết học Tây Âu Thời Trung Cổ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,400;0,12..72,700;1,12..72,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Chosen Palette: Medieval Manuscript -->
+    <!-- Application Structure Plan: This version maintains the 34-slide vertical deck structure but revamps the internal layout of key slides to a two-column infographic style, as requested by the user's example image. The medieval aesthetic (Texturina font, parchment background) is retained. -->
+    <!-- Visualization & Content Choices: The key addition is the implementation of a Chart.js Donut chart for the 'Realism vs. Nominalism' slide and a styled HTML vertical timeline for the 'Scholasticism' slide, directly mimicking the user's visual reference. Other slides adopt a more dynamic two-column layout with text on one side and a large AI-generated image on the other. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+      body,
+      html {
+        scroll-behavior: smooth;
+        background-color: #fdf6e3; /* Parchment background */
+        color: #4a2c2a; /* Dark brown text */
+        font-family: "Texturina", serif;
+      }
+      .slide {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        border-bottom: 2px solid #e0dace;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        width: 100%;
+      }
+      .slide.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .text-gradient {
+        background-image: linear-gradient(
+          to right,
+          #8b0000,
+          #4682b4
+        ); /* Deep Red to Steel Blue */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        line-height: 1.3;
+        padding: 0.25rem 0;
+        display: inline-block;
+      }
+      .navigation-controls {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 50;
+        display: flex;
+        gap: 1rem;
+      }
+      .nav-btn {
+        background-color: rgba(74, 44, 42, 0.8); /* Dark brown */
+        color: #fdf6e3; /* Parchment */
+        border: 2px solid #d3c2a9;
+        border-radius: 9999px;
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .nav-btn:hover {
+        background-color: #8b0000; /* Deep red */
+        transform: scale(1.1);
+      }
+      .slide-counter {
+        position: fixed;
+        bottom: 3rem;
+        left: 2rem;
+        z-index: 50;
+        background-color: rgba(253, 246, 227, 0.8);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 700;
+        font-size: 1.25rem;
+        color: #4a2c2a;
+        border: 1px solid #d3c2a9;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .image-container {
+        width: 100%;
+        border: 3px solid #d3c2a9;
+        background-color: #ede4d1;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .timeline-item::before {
+        content: "•";
+        position: absolute;
+        left: -33px;
+        top: -5px;
+        font-size: 2rem;
+        color: #8b0000;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <main>
+      <!-- Slide 1 -->
+      <section id="slide-1" class="slide text-center">
+        <h1
+          class="text-5xl md:text-7xl font-bold text-gradient leading-tight"
+          style="line-height: 1.2; padding: 0.5rem 0"
+        >
+          TRIẾT HỌC TÂY ÂU THỜI TRUNG CỔ
+        </h1>
+        <p class="mt-6 text-3xl md:text-4xl font-bold text-slate-800">
+          Bối cảnh, Đặc điểm & Di sản
+        </p>
+        <div class="image-container my-8 max-w-xl h-80">
+          <img
+            src="img/1.1.png"
+            alt="Triết học Tây Âu thời Trung cổ - Medieval Philosophy"
+            class="w-full h-full object-cover rounded-lg"
+          />
+        </div>
+        <div class="mt-4">
+          <h2 class="text-3xl font-bold text-[#8B0000]">
+            Nhóm thực hiện: Nhóm 2
+          </h2>
+          <div
+            class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-6 max-w-6xl mx-auto text-slate-700 text-2xl"
+          >
+            <span class="text-left whitespace-nowrap">Phạm Đức Huy</span>
+            <span class="text-left whitespace-nowrap">Trần Thảo Linh</span>
+            <span class="text-left whitespace-nowrap">Nguyễn Hữu Lộc</span>
+            <span class="text-left whitespace-nowrap">Hoàng Thị Thanh Nga</span>
+            <span class="text-left whitespace-nowrap">Nguyễn Thanh Ngân</span>
+            <span class="text-left whitespace-nowrap">Hồ Bích Ngọc</span>
+            <span class="text-left whitespace-nowrap">Hoàng Đình Quang</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section id="slide-2" class="slide">
+        <div
+          class="bg-[#faf3e0] border-2 border-[#d3c2a9] rounded-xl shadow-2xl p-8 md:p-12 w-full max-w-4xl text-center"
+        >
+          <h2 class="text-4xl font-bold text-gradient mb-8">
+            Cấu trúc bài trình bày
+          </h2>
+          <div class="image-container h-110 mb-8">
+            <img
+              src="img/2.1.png"
+              alt="Cấu trúc bài trình bày"
+              class="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <ol
+            class="space-y-4 text-2xl text-slate-800 text-left list-decimal list-inside"
+          >
+            <li>Bối cảnh & Ảnh hưởng chung</li>
+            <li>Các đặc điểm chính của Triết học Trung cổ</li>
+            <li>Tư tưởng Ô-guýt-xtanh</li>
+            <li>Tư tưởng Ơ ri gien nơ</li>
+            <li>Tư tưởng Thô-mát Đa-canh</li>
+            <li>Tư tưởng Đơn Xcốt</li>
+            <li>Nhận xét, Đánh giá & Ảnh hưởng</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Phần của Người 1 -->
+      <section id="slide-3" class="slide text-center">
+        <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+          1. Bối cảnh định hình Triết học
+        </h2>
+        <p class="text-2xl text-slate-600 mb-10">
+          Người trình bày: [Tên thành viên 1]
+        </p>
+        <div
+          class="grid md:grid-cols-3 gap-8 max-w-6xl text-2xl text-slate-800"
+        >
+          <p>Kinh tế, xã hội, văn hóa có nhiều thay đổi đáng kể.</p>
+          <p class="font-bold">Các trung tâm trí thức mới ra đời: Đại học.</p>
+          <p>
+            Bối cảnh này định hình triết học thành công cụ phục vụ thần học,
+            mang tính "kinh viện".
+          </p>
+        </div>
+        <div class="image-container mt-8 max-w-2xl h-64"></div>
+      </section>
+
+      <section id="slide-4" class="slide">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+          <div>
+            <h3 class="text-4xl font-bold text-[#4682B4] mb-6">
+              Điều kiện kinh tế - xã hội (TK XII-XV)
+            </h3>
+            <ul class="list-disc list-inside space-y-4 text-xl text-slate-800">
+              <li>
+                <span class="font-bold">Kinh tế phát triển:</span> Nông nghiệp,
+                thủ công nghiệp, thương mại khởi sắc.
+              </li>
+              <li>
+                <span class="font-bold">Xã hội biến động:</span> Dân số tăng, đô
+                thị mở rộng, các công xã mới ra đời.
+              </li>
+              <li>
+                <span class="font-bold">Tổ chức xã hội:</span> Hiệp hội, phường
+                hội, nghiệp đoàn điều hành xã hội.
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-[#faf3e0] p-4 rounded-lg border border-[#d3c2a9] shadow-lg"
+          >
+            <canvas id="populationChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-5" class="slide">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+          <div class="image-container h-96"></div>
+          <div>
+            <h3 class="text-4xl font-bold text-[#8B0000] mb-6">
+              Bối cảnh văn hóa - giáo dục
+            </h3>
+            <ul class="list-disc list-inside space-y-4 text-xl text-slate-800">
+              <li>
+                <span class="font-bold">Giáo dục & Học thuật:</span> Sự ra đời
+                của các trường đại học lớn: Paris, Bologna, Oxford.
+              </li>
+              <li>
+                <span class="font-bold">Ngôn ngữ:</span> Tiếng Latinh là ngôn
+                ngữ chính trong học thuật.
+              </li>
+              <li>
+                <span class="font-bold">Nghệ thuật:</span> Kiến trúc Roman và
+                Gothic phát triển rực rỡ.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-6" class="slide">
+        <div class="w-full max-w-6xl">
+          <h3 class="text-4xl font-bold text-center text-[#4682B4] mb-8">
+            Ảnh hưởng đến sự hình thành Triết học
+          </h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">
+                1. Bộc lộ mâu thuẫn xã hội
+              </h4>
+              <p class="text-xl">
+                Dẫn đến liên minh giữa nhà vua và thị dân để chống lại chế độ
+                phong kiến.
+              </p>
+            </div>
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">
+                2. Triết học "hướng ngoại"
+              </h4>
+              <p class="text-xl">
+                Trở thành "Đẩy tớ cho thần học" với nhiệm vụ chính là phục vụ
+                thần học.
+              </p>
+            </div>
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border border-[#d3c2a9] md:col-span-2"
+            >
+              <h4 class="font-bold text-2xl mb-4 text-center">
+                3 & 4. Thần học hóa và Nhiệm vụ của Triết học
+              </h4>
+              <div class="text-center mt-4">
+                <div
+                  class="p-4 bg-[#8B0000] text-white rounded-t-lg font-bold text-xl"
+                >
+                  THẦN HỌC
+                </div>
+                <div
+                  class="border-l-4 border-r-4 border-b-4 border-[#d3c2a9] p-4 bg-white"
+                >
+                  <p class="font-bold text-xl">TRIẾT HỌC</p>
+                  <p class="text-lg text-slate-600">
+                    (Lý giải, chứng minh Kinh thánh)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-7" class="slide">
+        <div class="w-full max-w-6xl text-center">
+          <h3 class="text-4xl font-bold text-[#8B0000] mb-8">
+            Ảnh hưởng đến sự hình thành Triết học (tiếp)
+          </h3>
+          <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">5. Phát triển chậm chạp</h4>
+              <p class="text-xl">
+                Quyền lực phong kiến và thần quyền cản trở sự phát triển của
+                khoa học.
+              </p>
+              <div class="image-container h-48 mt-4"></div>
+            </div>
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">
+                6. Đấu tranh tư tưởng nội bộ
+              </h4>
+              <p class="text-xl">
+                Cuộc tranh luận sôi nổi giữa Duy thực và Duy danh về "cái chung"
+                và "cái riêng".
+              </p>
+              <div class="image-container h-48 mt-4"></div>
+            </div>
+          </div>
+          <div
+            class="bg-blue-100 border-l-8 border-[#4682B4] text-[#4a2c2a] p-6 rounded-r-lg shadow-lg"
+          >
+            <p class="text-2xl font-bold">
+              Tóm lại: Triết học Trung cổ đã trở thành công cụ phục vụ thần học,
+              mang đậm tính "kinh viện".
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần của Người 2 -->
+      <section id="slide-8" class="slide">
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-center md:text-left">
+            <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+              2. 7 Đặc điểm nổi bật của Triết học
+            </h2>
+            <p class="text-2xl text-slate-600 mb-8">
+              Người trình bày: [Tên thành viên 2]
+            </p>
+            <p class="text-xl">
+              Xu hướng phục tùng thần học, bị cản trở khoa học, phát triển chậm
+              chạp ("kinh viện"). Triết học tập trung vào mối quan hệ Tri thức –
+              Niềm tin, tranh luận "cái chung" – "cái riêng", và các vấn đề đạo
+              đức, xã hội gắn với thần học.
+            </p>
+          </div>
+          <div class="image-container h-96"></div>
+        </div>
+      </section>
+
+      <section id="slide-9" class="slide">
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+          >
+            <h3 class="text-3xl font-bold text-[#4682B4] mb-4">
+              1. "Đẩy tớ cho thần học"
+            </h3>
+            <p class="text-xl">
+              Phục vụ, củng cố giáo điều tôn giáo. <br /><i
+                >Ví dụ: Thô-mát Đa-canh cho rằng triết học thấp hơn, phải phục
+                tùng thần học.</i
+              >
+            </p>
+          </div>
+          <div
+            class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+          >
+            <h3 class="text-3xl font-bold text-[#8B0000] mb-4">
+              2. Hệ tư tưởng của Thiên Chúa giáo
+            </h3>
+            <p class="text-xl">
+              Mọi vấn đề đều được nhìn dưới lăng kính tôn giáo, phải phù hợp với
+              giáo lý và giáo hội.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-10" class="slide">
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+          >
+            <h3 class="text-3xl font-bold text-[#DAA520] mb-4">
+              3. Cản trở khoa học & kỹ thuật
+            </h3>
+            <p class="text-xl">
+              Do quyền lực của phong kiến và thần quyền thống trị. <br /><i
+                >Ví dụ: Rôgiê Bêcơn đã phê phán phương pháp kinh viện và đề cao
+                thực nghiệm.</i
+              >
+            </p>
+          </div>
+          <div
+            class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+          >
+            <h3 class="text-3xl font-bold text-slate-700 mb-4">
+              4. Triết học kinh viện, phát triển chậm
+            </h3>
+            <p class="text-xl">
+              Phương pháp chủ yếu là phân tích logic, hệ thống hóa giáo điều
+              bằng lý trí, nhưng bị ràng buộc bởi thần học.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-11" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#8B0000] mb-8">
+            5. Nghiên cứu mối quan hệ Tri thức – Niềm tin
+          </h3>
+          <div class="flex justify-center items-end gap-8 p-6">
+            <div class="text-center">
+              <p class="text-3xl">🧠</p>
+              <p class="font-bold text-2xl">Lý trí</p>
+              <div
+                class="h-24 w-24 bg-slate-400 rounded mt-2 border-2 border-slate-500"
+              ></div>
+            </div>
+            <div
+              class="h-16 w-32 border-b-4 border-t-4 border-[#4a2c2a] mb-8"
+            ></div>
+            <div class="text-center">
+              <p class="text-3xl">🙏</p>
+              <p class="font-bold text-2xl text-[#DAA520]">Đức tin</p>
+              <div
+                class="h-40 w-24 bg-[#DAA520] rounded mt-2 border-2 border-yellow-700"
+              ></div>
+            </div>
+          </div>
+          <p class="mt-6 text-xl">
+            Vấn đề trung tâm là vị trí của lý trí con người so với đức tin. Quan
+            điểm chung: Tôn giáo luôn giữ vị trí hàng đầu.
+          </p>
+        </div>
+      </section>
+
+      <!-- Slide 12 REVISED -->
+      <section id="slide-12" class="slide">
+        <div class="w-full max-w-6xl">
+          <h3 class="text-4xl font-bold text-center text-[#4682B4] mb-8">
+            6. Vấn đề "cái chung" và "cái riêng" là trọng tâm
+          </h3>
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <h4 class="text-3xl font-bold text-[#4682B4] mb-4">
+                Chủ nghĩa Duy thực
+              </h4>
+              <p class="text-xl mb-6">
+                "Cái chung" có thật, tồn tại độc lập, có trước sự vật cá
+                biệt.<br /><i>(Ơ ri gien nơ, Thô-mát Đa-canh)</i>
+              </p>
+              <h4 class="text-3xl font-bold text-[#8B0000] mb-4">
+                Chủ nghĩa Duy danh
+              </h4>
+              <p class="text-xl">
+                Chỉ sự vật cá biệt có thật. "Cái chung" chỉ là tên gọi do con
+                người tạo ra.<br /><i>(Đơn Xcốt, Uyliam Ốc Cam)</i>
+              </p>
+            </div>
+            <div class="w-full max-w-md mx-auto">
+              <canvas id="debateChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-13" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#DAA520] mb-8">
+            7. Đạo đức và Xã hội gắn liền với thần học
+          </h3>
+          <p class="text-2xl mb-6">
+            Con người được xem là phương tiện của tôn giáo. Đạo đức, xã hội phải
+            phù hợp với giáo điều. Hạnh phúc chỉ có thể đạt được qua sự phục
+            tùng Thượng đế.
+          </p>
+          <div
+            class="bg-[#faf3e0] border-2 border-[#d3c2a9] p-6 rounded-xl shadow-lg"
+          >
+            <p class="text-xl">
+              <i
+                >Ví dụ: Ô-guýt-xtanh bảo vệ bất bình đẳng xã hội. Thô-mát
+                Đa-canh coi đạo đức là sản phẩm của Thượng đế.</i
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần của Người 3 -->
+      <section id="slide-14" class="slide">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+          <div class="text-center md:text-left">
+            <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+              3. Ô-GUÝT-XTANH (354-430)
+            </h2>
+            <p class="text-3xl text-slate-800 mb-6">
+              Nền móng Thần học hóa Triết học
+            </p>
+            <p class="text-2xl text-slate-600">
+              Người trình bày: [Tên thành viên 3]
+            </p>
+          </div>
+          <div class="image-container h-[500px]"></div>
+        </div>
+      </section>
+
+      <section id="slide-15" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#4682B4] mb-8">
+            Giới thiệu chung & Tư tưởng
+          </h3>
+          <p class="text-2xl">
+            Là đại biểu giai đoạn quá độ, Ô-guýt-xtanh đặt Thượng đế làm trung
+            tâm của thực tại và xem niềm tin tôn giáo là nguồn gốc chính của mọi
+            tri thức.
+          </p>
+        </div>
+      </section>
+
+      <section id="slide-16" class="slide">
+        <div class="w-full max-w-4xl">
+          <h3 class="text-4xl font-bold text-center text-[#8B0000] mb-8">
+            Nhân sinh quan của Ô-guýt-xtanh
+          </h3>
+          <div
+            class="bg-[#faf3e0] border-2 border-[#d3c2a9] p-8 rounded-xl shadow-lg space-y-4"
+          >
+            <p class="text-xl">
+              <span class="font-bold">Con người:</span> Phân biệt rạch ròi giữa
+              thể chất và tinh thần.
+            </p>
+            <p class="text-xl">
+              <span class="font-bold">Đạo đức:</span> Thể chất không sinh ra đạo
+              đức, đạo đức đến từ tinh thần.
+            </p>
+            <p class="text-xl">
+              <span class="font-bold">Hạnh phúc:</span> Không ở trần gian, mà ở
+              "thiên đàng" sau khi chết.
+            </p>
+            <p class="text-xl">
+              <span class="font-bold">Mục đích sống:</span> Con người là phương
+              tiện để thực hiện mệnh lệnh của tôn giáo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-17" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#DAA520] mb-8">
+            Quan niệm về xã hội của Ô-guýt-xtanh
+          </h3>
+          <p class="text-2xl mb-6">
+            Ông bảo vệ sự bất bình đẳng xã hội, cho rằng sự phân chia giàu nghèo
+            là quy luật tự nhiên của nhà nước.
+          </p>
+          <div class="image-container max-w-lg h-80"></div>
+        </div>
+      </section>
+
+      <!-- Phần của Người 4 -->
+      <section id="slide-18" class="slide">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+          <div class="text-center md:text-left">
+            <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+              4. Ơ RI GIEN NƠ (810-877)
+            </h2>
+            <p class="text-3xl text-slate-800 mb-6">
+              Duy thực sơ kỳ và Lý trí – Niềm tin
+            </p>
+            <p class="text-2xl text-slate-600">
+              Người trình bày: [Tên thành viên 4]
+            </p>
+          </div>
+          <div class="image-container h-[500px]"></div>
+        </div>
+      </section>
+
+      <section id="slide-19" class="slide">
+        <div class="w-full max-w-4xl">
+          <h3 class="text-4xl font-bold text-center text-[#4682B4] mb-8">
+            Bản thể luận (Lập trường Duy thực)
+          </h3>
+          <div
+            class="bg-[#faf3e0] border-2 border-[#d3c2a9] p-8 rounded-xl shadow-lg text-center"
+          >
+            <p class="text-2xl font-bold">
+              "Cái chung" là thực tại tinh thần, là cái có thật.
+            </p>
+            <p class="text-5xl my-4 font-thin">↓</p>
+            <p class="text-2xl">
+              "Cái chung" tồn tại trước sự vật cá biệt và là cơ sở của "cái
+              riêng".
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-20" class="slide">
+        <div class="w-full max-w-5xl text-center">
+          <h3 class="text-4xl font-bold text-[#8B0000] mb-8">
+            Nhận thức luận của Ơ ri gien nơ
+          </h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">Lý trí</h4>
+              <p class="text-xl">Chỉ có khả năng nhận thức giới tự nhiên.</p>
+            </div>
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">Lòng tin</h4>
+              <p class="text-xl">
+                Vượt lên trên lý trí để hiểu được mục đích của Thượng đế.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần của Người 5 -->
+      <section id="slide-21" class="slide">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+          <div class="text-center md:text-left">
+            <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+              5. THÔ-MÁT ĐA-CANH (1225-1274)
+            </h2>
+            <p class="text-3xl text-slate-800 mb-6">
+              Đỉnh cao Chủ nghĩa Kinh viện
+            </p>
+            <p class="text-2xl text-slate-600">
+              Người trình bày: [Tên thành viên 5]
+            </p>
+          </div>
+          <div class="image-container h-[500px]"></div>
+        </div>
+      </section>
+
+      <section id="slide-22" class="slide">
+        <div class="w-full max-w-5xl text-center">
+          <h3 class="text-4xl font-bold text-[#4682B4] mb-8">
+            Bản thể luận (Duy thực ôn hòa)
+          </h3>
+          <p class="text-2xl mb-6">"Cái chung" tồn tại trên ba mặt:</p>
+          <div class="grid md:grid-cols-3 gap-6 text-xl">
+            <div
+              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <b>1. Trong trí tuệ Thượng đế</b><br />(trước sự vật)
+            </div>
+            <div
+              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <b>2. Trong sự vật</b><br />(là quy luật, tri thức)
+            </div>
+            <div
+              class="bg-[#faf3e0] p-6 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <b>3. Trong trí tuệ con người</b><br />(sau sự vật)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-23" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#8B0000] mb-8">Nhận thức luận</h3>
+          <p class="text-2xl mb-6">
+            Triết học và Thần học không đối lập, vì Thượng đế là nguồn gốc của
+            mọi chân lý. Tuy nhiên, triết học ở vị trí thấp hơn và phải phục
+            tùng thần học.
+          </p>
+        </div>
+      </section>
+
+      <section id="slide-24" class="slide">
+        <div class="w-full max-w-5xl">
+          <h3 class="text-4xl font-bold text-center text-[#DAA520] mb-8">
+            Nhân sinh quan & Quan niệm về xã hội
+          </h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">Nhân sinh quan</h4>
+              <p class="text-xl">
+                Đạo đức là sản phẩm của Thượng đế. Hạnh phúc đến từ hy vọng,
+                tình yêu và niềm tin dẫn đến thiên đàng.
+              </p>
+            </div>
+            <div
+              class="bg-[#faf3e0] p-8 rounded-xl shadow-lg border-2 border-[#d3c2a9]"
+            >
+              <h4 class="font-bold text-2xl mb-3">Quan niệm xã hội</h4>
+              <p class="text-xl">
+                Chống bất bình đẳng xã hội. Quyền của vua là do Thượng đế ban,
+                nhưng vua phải phục tùng Giáo hoàng La Mã.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần của Người 6 -->
+      <section id="slide-25" class="slide">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
+          <div class="text-center md:text-left">
+            <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+              6. ĐƠN XCỐT (1265-1308)
+            </h2>
+            <p class="text-3xl text-slate-800 mb-6">
+              Tiếng nói của Chủ nghĩa Duy danh
+            </p>
+            <p class="text-2xl text-slate-600">
+              Người trình bày: [Tên thành viên 6]
+            </p>
+          </div>
+          <div class="image-container h-[500px]"></div>
+        </div>
+      </section>
+
+      <section id="slide-26" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#4682B4] mb-8">
+            Bản thể luận (Lập trường Duy danh)
+          </h3>
+          <div
+            class="bg-[#faf3e0] border-2 border-[#d3c2a9] p-8 rounded-xl shadow-lg"
+          >
+            <p class="text-2xl">
+              Chỉ có sự vật riêng lẻ là tồn tại thực tế. Quan điểm này đối lập
+              hoàn toàn với trường phái Duy thực.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="slide-27" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#8B0000] mb-8">
+            Nhận thức luận của Đơn Xcốt
+          </h3>
+          <div
+            class="bg-[#faf3e0] border-2 border-[#d3c2a9] p-8 rounded-xl shadow-lg"
+          >
+            <p class="text-2xl">
+              "Cái chung" là gì? Nó chỉ là tên gọi đơn thuần do con người sáng
+              tạo ra. Khái niệm chỉ là sản phẩm tư duy của con người về sự vật.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Phần của Người 7 -->
+      <section id="slide-28" class="slide text-center">
+        <h2 class="text-5xl font-bold text-[#8B0000] mb-4">
+          7. Triết học Trung cổ: Hạn chế, Vai trò & Di sản
+        </h2>
+        <p class="text-2xl text-slate-600 mb-8">
+          Người trình bày: [Tên thành viên 7]
+        </p>
+        <div class="image-container max-w-xl h-80"></div>
+      </section>
+
+      <section id="slide-29" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-red-700 mb-8">
+            Hạn chế và tính chất đặc thù
+          </h3>
+          <ul class="space-y-4 text-2xl">
+            <li>Mang nặng tính thần học, là "đẩy tớ cho thần học".</li>
+            <li>
+              Cản trở khoa học và phát triển chậm chạp do thần quyền kìm hãm.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="slide-30" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-green-700 mb-8">
+            Điểm tích cực và vai trò chuyển tiếp
+          </h3>
+          <ul class="space-y-4 text-2xl">
+            <li>
+              Cuộc đấu tranh tư tưởng nội bộ (Duy thực – Duy danh) làm phong phú
+              tư duy.
+            </li>
+            <li>
+              Gieo mầm cho sự chuyển biến với sự ra đời của các trường đại học
+              và các nhà tư tưởng cấp tiến như Rôgiê Bêcơn.
+            </li>
+          </ul>
+          <div class="image-container mt-8 max-w-lg h-64"></div>
+        </div>
+      </section>
+
+      <section id="slide-31" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#4682B4] mb-8">
+            Ảnh hưởng đến Phục hưng (TK XV-XVI)
+          </h3>
+          <p class="text-2xl">
+            Triết học Trung cổ trở thành bối cảnh để Phục hưng phản ứng và vượt
+            qua. Chủ nghĩa nhân đạo ra đời để đấu tranh chống lại sự thống trị
+            của Giáo hội, đề cao giá trị con người.
+          </p>
+          <div class="image-container mt-8 max-w-3xl h-80"></div>
+        </div>
+      </section>
+
+      <section id="slide-32" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#8B0000] mb-8">
+            Ảnh hưởng đến Cận đại (TK XVII-XVIII)
+          </h3>
+          <p class="text-2xl">
+            Thắng lợi của phương thức sản xuất tư bản đã yêu cầu khoa học phải
+            phát triển. Kết quả là khoa học tự nhiên phát triển mạnh, và Chủ
+            nghĩa duy vật ra đời để chống lại triết học kinh viện.
+          </p>
+          <div class="image-container mt-8 max-w-3xl h-72"></div>
+        </div>
+      </section>
+
+      <section id="slide-33" class="slide">
+        <div class="w-full max-w-4xl text-center">
+          <h3 class="text-4xl font-bold text-[#DAA520] mb-8">
+            Tạo tiền đề gián tiếp cho tư duy độc lập
+          </h3>
+          <ul class="space-y-4 text-2xl">
+            <li>
+              Cuộc đấu tranh Duy thực – Duy danh đã rèn luyện kỹ năng tư duy
+              logic, phân tích.
+            </li>
+            <li>
+              Nỗ lực của Rôgiê Bêcơn đã gieo mầm cho phương pháp khoa học thực
+              nghiệm và đề cao lý trí.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="slide-34" class="slide text-center">
+        <h2 class="text-5xl font-bold text-gradient mb-8">Kết luận chung</h2>
+        <div class="space-y-6 max-w-4xl text-2xl text-slate-800">
+          <p>
+            Triết học Trung cổ vừa tạo ra một "khuôn khổ" thần học hóa, kìm hãm
+            sự phát triển, nhưng cũng chính là nơi ươm mầm cho những tư tưởng về
+            lý trí và khoa học sau này.
+          </p>
+          <p class="font-bold">
+            Di sản lớn nhất của nó là trở thành điểm khởi đầu, là bối cảnh cần
+            thiết cho sự chuyển mình lớn lao của triết học phương Tây.
+          </p>
+        </div>
+        <div class="image-container mt-8 max-w-lg h-64"></div>
+        <p class="mt-12 text-3xl font-bold text-[#8B0000]">
+          Xin cảm ơn đã lắng nghe!
+        </p>
+      </section>
+    </main>
+
+    <div class="slide-counter" id="slide-counter">1 / 34</div>
+    <div class="navigation-controls">
+      <button id="prev-btn" class="nav-btn">↑</button>
+      <button id="next-btn" class="nav-btn">↓</button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".slide");
+        const slideCounter = document.getElementById("slide-counter");
+        let currentSlide = 0;
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                currentSlide = Array.from(slides).indexOf(entry.target);
+                updateCounter();
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        slides.forEach((slide) => observer.observe(slide));
+
+        const updateCounter = () => {
+          slideCounter.textContent = `${currentSlide + 1} / ${slides.length}`;
+        };
+
+        const navigate = (direction) => {
+          let nextSlideIndex = currentSlide + direction;
+          if (nextSlideIndex >= 0 && nextSlideIndex < slides.length) {
+            slides[nextSlideIndex].scrollIntoView({ behavior: "smooth" });
+          }
+        };
+
+        document
+          .getElementById("prev-btn")
+          .addEventListener("click", () => navigate(-1));
+        document
+          .getElementById("next-btn")
+          .addEventListener("click", () => navigate(1));
+
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowDown" || e.key === "PageDown") {
+            e.preventDefault();
+            navigate(1);
+          } else if (e.key === "ArrowUp" || e.key === "PageUp") {
+            e.preventDefault();
+            navigate(-1);
+          }
+        });
+
+        // Chart for Slide 4
+        const popCtx = document.getElementById("populationChart");
+        if (popCtx) {
+          new Chart(popCtx, {
+            type: "bar",
+            data: {
+              labels: [
+                "Thế kỷ X",
+                "Thế kỷ XI",
+                "Thế kỷ XII",
+                "Thế kỷ XIII",
+                "Thế kỷ XIV",
+              ],
+              datasets: [
+                {
+                  label: "Dân số Châu Âu (ước tính triệu người)",
+                  data: [35, 45, 60, 80, 75],
+                  backgroundColor: "#4682B4",
+                  borderColor: "#4a2c2a",
+                  borderWidth: 2,
+                },
+              ],
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    color: "#4a2c2a",
+                    font: { family: "'Texturina', serif", size: 14 },
+                  },
+                },
+                x: {
+                  ticks: {
+                    color: "#4a2c2a",
+                    font: { family: "'Texturina', serif", size: 14 },
+                  },
+                },
+              },
+              plugins: {
+                legend: {
+                  labels: {
+                    color: "#4a2c2a",
+                    font: { family: "'Texturina', serif", size: 16 },
+                  },
+                },
+              },
+            },
+          });
+        }
+
+        // Donut Chart for Slide 12
+        const debateCtx = document.getElementById("debateChart");
+        if (debateCtx) {
+          new Chart(debateCtx, {
+            type: "doughnut",
+            data: {
+              labels: [
+                "Chủ nghĩa Duy thực",
+                "Chủ nghĩa Duy danh",
+                "Quan điểm Dung hòa",
+              ],
+              datasets: [
+                {
+                  data: [45, 45, 10],
+                  backgroundColor: ["#4682B4", "#8B0000", "#DAA520"],
+                  borderColor: "#fdf6e3",
+                  borderWidth: 4,
+                },
+              ],
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                legend: {
+                  position: "bottom",
+                  labels: {
+                    color: "#4a2c2a",
+                    font: { family: "'Texturina', serif", size: 16 },
+                  },
+                },
+              },
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
